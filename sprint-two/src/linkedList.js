@@ -16,11 +16,13 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
+    var temp = list.head.value;
     list.head = list.head.next;
+    return temp;
   };
 
   list.contains = function(target) {
-    
+    return list.head.value === target || list.tail.value === target ? true : false;
   };
 
   return list;
