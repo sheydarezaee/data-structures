@@ -31,23 +31,18 @@ var queueMethods = {
 	},
 	dequeue : function() {
 		//remove the keys from storage object (from the beginning 
+		
 		if(this.count > 0) {                                      // dequeue()                    dequeue()           
 		  var result = this.storage[this.firstKeyNumber];         // r = a                        r = undefined, it looks for result[2], should be b
 		  delete this.storage[this.firstKeyNumber];               // storage = {}                 same, tries to delete storage[2], should delete storage[1];  
 		  this.count--;
-		  if (storage[1] !== undefined) {
+		  if (this.storage[1] !== undefined) {
             this.firstKeyNumber++; 
 		  }                                           // c = 0          
-		                                     // f = 2                
-          
+
           return result;
-			/*
-			var result = this.storage[this.count];
-			delete this.storage[this.count];
-			this.count--;
-			return result;
-			*/
 		}
+		
 		else {
 			return result;
 		}
@@ -56,5 +51,25 @@ var queueMethods = {
 		return this.count;
 	}
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
