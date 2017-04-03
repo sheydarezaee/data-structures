@@ -8,13 +8,15 @@ var Set = function() {
 var setPrototype = {};
 
 setPrototype.add = function(item) {
-	
+	this.storage[item] = item;
 };
 
 setPrototype.contains = function(item) {
+	return this.storage.hasOwnProperty(item)
 };
 
 setPrototype.remove = function(item) {
+	delete this.storage[item];
 };
 
 /*

@@ -48,8 +48,10 @@ Graph.prototype.removeEdge = function(fromNode, toNode) {
 };
 
 // Pass in a callback which will be executed on each node of the graph.
-Graph.prototype.forEachNode = function(cb, node) {
-	this.storage[node].forEach(cb)
+Graph.prototype.forEachNode = function(cb) {
+	for (var key in this.storage) {
+		cb(key);
+	}
 };
 // callback: connect to 5:
 // connects each node to 5
